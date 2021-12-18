@@ -24,33 +24,6 @@ namespace AsanPardakht.BL.Service.Controllers
             _UserInfo = UserInfo;
         }
 
-   
-
-
-        [HttpGet]
-        [Route("[action]")]
-        public List<User> GetU()
-        {
-            //StatusCodes.
-            throw new NotSupportedException("Ddd");
-            throw new Exception("Exception while fetching all the students from the storage.");
-            //return Ok(_UserInfo.GetU());
-            HttpResponseMessage a = new HttpResponseMessage(HttpStatusCode.OK);
-            //a.Content = (HttpContent)_UserInfo.GetU();
-
-
-          //  return a;
-
-           // HttpResponseMessage response = Request.cr (HttpStatusCode.BadRequest, "Error message");
-          //  return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("fffffffffffffffffff") };
-        Response.StatusCode= StatusCodes.Status404NotFound;
-
-            //  return _UserInfo.GetU().ToList();
-            return null;
-        }
-
-
-
 
         #region User
         [HttpPost]
