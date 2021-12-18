@@ -1,0 +1,17 @@
+﻿using AsanPardakht.DAL.SQL;
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            using (var context = new APDB())
+            {
+                context.Database.EnsureCreated();
+            }
+        }
+    }
+}

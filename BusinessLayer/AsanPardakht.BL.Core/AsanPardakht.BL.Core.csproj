@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonLayer\AsanPardakht.CL\AsanPardakht.CL.csproj" />
+    <ProjectReference Include="..\..\DataaccessLayer\AsanPardakht.DAL.SQL\AsanPardakht.DAL.SQL.csproj" />
+  </ItemGroup>
+
+</Project>
