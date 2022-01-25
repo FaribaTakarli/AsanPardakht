@@ -16,7 +16,6 @@ namespace AsanPardakht.BL.Service.Controllers
 {
     //Change in Master
     //Chnage in testb
-    //chanage for rest
     //[Route("[controller]")]
     [ApiVersion("1.0")]
     public class UserInfoService : BaseApiController
