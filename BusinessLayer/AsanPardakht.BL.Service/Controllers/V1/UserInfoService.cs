@@ -16,13 +16,12 @@ namespace AsanPardakht.BL.Service.Controllers
 {
     //Change in Master
     //Chnage in testb
-    //Change in testb to merge
     //[Route("[controller]")]
     [ApiVersion("1.0")]
     public class UserInfoService : BaseApiController
     {
         protected readonly IUserInfo _UserInfo;
-        public UserInfoService(ILogger<BaseApiController> logger, IUserInfo UserInfo) : base(logger)
+        public UserInfoService(ILogger<BaseApiController> logger , IUserInfo UserInfo) : base(logger)
         {
             _UserInfo = UserInfo;
         }
@@ -31,10 +30,10 @@ namespace AsanPardakht.BL.Service.Controllers
         #region User
         [HttpPost]
         [Route("[action]")]
-        public async Task<IActionResult> FilterUsers(UserDTO_request user, int pageNumber, int PageSize)
+        public async Task<IActionResult> FilterUsers(UserDTO_request user,int pageNumber, int PageSize)
         {
             Response.StatusCode = StatusCodes.Status200OK;
-            return Ok(await _UserInfo.FilterUsers(user, pageNumber, PageSize));
+            return Ok(await _UserInfo.FilterUsers( user,  pageNumber,  PageSize));
         }
 
         [HttpGet]
@@ -42,7 +41,7 @@ namespace AsanPardakht.BL.Service.Controllers
         public async Task<IActionResult> GetUserByID(int Id)
         {
             Response.StatusCode = StatusCodes.Status200OK;
-            return Ok(await _UserInfo.GetUserByID(Id));
+            return Ok( await _UserInfo.GetUserByID(Id));
         }
 
         [HttpDelete]
